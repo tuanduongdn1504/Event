@@ -15,7 +15,11 @@ struct MainView: View {
             switch mainViewModel.currentView {
             case .splash:
                 SpashView()
+            case .auth:
+                RequestAuthenticationView()
+                    .environmentObject(mainViewModel)
             }
+            
         }
     }
 }
