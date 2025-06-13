@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Event_Watch_AppApp: App {
+    @StateObject private var mainViewModel = MainViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(mainViewModel)
         }
     }
 }

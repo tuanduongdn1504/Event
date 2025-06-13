@@ -7,11 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		715CF84A2DFAD7AE0025D4A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715CF8492DFAD7AE0025D4A2 /* Preview Assets.xcassets */; };
+		715CF84D2DFADA130025D4A2 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF84C2DFADA130025D4A2 /* RxBlocking */; };
+		715CF84F2DFADA130025D4A2 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF84E2DFADA130025D4A2 /* RxBlocking-Dynamic */; };
+		715CF8512DFADA130025D4A2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF8502DFADA130025D4A2 /* RxCocoa */; };
+		715CF8532DFADA130025D4A2 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF8522DFADA130025D4A2 /* RxCocoa-Dynamic */; };
+		715CF8552DFADA130025D4A2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF8542DFADA130025D4A2 /* RxRelay */; };
+		715CF8572DFADA130025D4A2 /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF8562DFADA130025D4A2 /* RxRelay-Dynamic */; };
+		715CF8592DFADA130025D4A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF8582DFADA130025D4A2 /* RxSwift */; };
+		715CF85B2DFADA130025D4A2 /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF85A2DFADA130025D4A2 /* RxSwift-Dynamic */; };
+		715CF85D2DFADA130025D4A2 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF85C2DFADA130025D4A2 /* RxTest */; };
+		715CF85F2DFADA130025D4A2 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 715CF85E2DFADA130025D4A2 /* RxTest-Dynamic */; };
+		715CF8612DFAE0430025D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715CF8602DFAE0430025D4A2 /* Assets.xcassets */; };
+		715CF8672DFAE4780025D4A2 /* WatchAppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8642DFAE4780025D4A2 /* WatchAppIcon.swift */; };
+		715CF8682DFAE4780025D4A2 /* WatchAppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8652DFAE4780025D4A2 /* WatchAppFont.swift */; };
+		715CF8692DFAE4780025D4A2 /* WatchAppSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8662DFAE4780025D4A2 /* WatchAppSize.swift */; };
+		715CF86B2DFB03E00025D4A2 /* SpashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF86A2DFB03E00025D4A2 /* SpashView.swift */; };
+		715CF86E2DFB04070025D4A2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF86C2DFB04070025D4A2 /* MainViewModel.swift */; };
+		715CF86F2DFB04070025D4A2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF86D2DFB04070025D4A2 /* MainView.swift */; };
+		715CF8742DFB0F900025D4A2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8722DFB0F900025D4A2 /* BaseView.swift */; };
+		715CF8752DFB0F900025D4A2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */; };
 		71A93CBE2DFABBA7000C0B5F /* Event Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A93CC22DFABBA7000C0B5F /* EventApp.swift */; };
-		71A93CC52DFABBA7000C0B5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A93CC42DFABBA7000C0B5F /* ContentView.swift */; };
-		71A93CC72DFABBAA000C0B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A93CC62DFABBAA000C0B5F /* Assets.xcassets */; };
-		71A93CCA2DFABBAA000C0B5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A93CC92DFABBAA000C0B5F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +56,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		715CF8492DFAD7AE0025D4A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		715CF8602DFAE0430025D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		715CF8642DFAE4780025D4A2 /* WatchAppIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchAppIcon.swift; sourceTree = "<group>"; };
+		715CF8652DFAE4780025D4A2 /* WatchAppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchAppFont.swift; sourceTree = "<group>"; };
+		715CF8662DFAE4780025D4A2 /* WatchAppSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchAppSize.swift; sourceTree = "<group>"; };
+		715CF86A2DFB03E00025D4A2 /* SpashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpashView.swift; sourceTree = "<group>"; };
+		715CF86C2DFB04070025D4A2 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		715CF86D2DFB04070025D4A2 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		715CF8722DFB0F900025D4A2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		71A93CB72DFABBA7000C0B5F /* Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CC22DFABBA7000C0B5F /* EventApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventApp.swift; sourceTree = "<group>"; };
-		71A93CC42DFABBA7000C0B5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		71A93CC62DFABBAA000C0B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		71A93CC92DFABBAA000C0B5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +76,109 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715CF85B2DFADA130025D4A2 /* RxSwift-Dynamic in Frameworks */,
+				715CF85D2DFADA130025D4A2 /* RxTest in Frameworks */,
+				715CF8552DFADA130025D4A2 /* RxRelay in Frameworks */,
+				715CF8532DFADA130025D4A2 /* RxCocoa-Dynamic in Frameworks */,
+				715CF8572DFADA130025D4A2 /* RxRelay-Dynamic in Frameworks */,
+				715CF8512DFADA130025D4A2 /* RxCocoa in Frameworks */,
+				715CF84D2DFADA130025D4A2 /* RxBlocking in Frameworks */,
+				715CF84F2DFADA130025D4A2 /* RxBlocking-Dynamic in Frameworks */,
+				715CF85F2DFADA130025D4A2 /* RxTest-Dynamic in Frameworks */,
+				715CF8592DFADA130025D4A2 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		715CF83D2DFAD7610025D4A2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8702DFB0F6B0025D4A2 /* Common */,
+				715CF8622DFAE4780025D4A2 /* Helpers */,
+				715CF83E2DFAD7610025D4A2 /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		715CF83E2DFAD7610025D4A2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				715CF83F2DFAD7610025D4A2 /* Splash */,
+				715CF8402DFAD7610025D4A2 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		715CF83F2DFAD7610025D4A2 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				715CF86A2DFB03E00025D4A2 /* SpashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		715CF8402DFAD7610025D4A2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				715CF86D2DFB04070025D4A2 /* MainView.swift */,
+				715CF86C2DFB04070025D4A2 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		715CF8432DFAD7610025D4A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8602DFAE0430025D4A2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		715CF8482DFAD7AE0025D4A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8492DFAD7AE0025D4A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		715CF8622DFAE4780025D4A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8632DFAE4780025D4A2 /* Style */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		715CF8632DFAE4780025D4A2 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8642DFAE4780025D4A2 /* WatchAppIcon.swift */,
+				715CF8652DFAE4780025D4A2 /* WatchAppFont.swift */,
+				715CF8662DFAE4780025D4A2 /* WatchAppSize.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		715CF8702DFB0F6B0025D4A2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8712DFB0F770025D4A2 /* Bases */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		715CF8712DFB0F770025D4A2 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				715CF8722DFB0F900025D4A2 /* BaseView.swift */,
+				715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
 		71A93CB02DFABBA6000C0B5F = {
 			isa = PBXGroup;
 			children = (
@@ -78,20 +199,12 @@
 		71A93CC12DFABBA7000C0B5F /* Event Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				715CF8482DFAD7AE0025D4A2 /* Preview Content */,
+				715CF8432DFAD7610025D4A2 /* Resources */,
+				715CF83D2DFAD7610025D4A2 /* Sources */,
 				71A93CC22DFABBA7000C0B5F /* EventApp.swift */,
-				71A93CC42DFABBA7000C0B5F /* ContentView.swift */,
-				71A93CC62DFABBAA000C0B5F /* Assets.xcassets */,
-				71A93CC82DFABBAA000C0B5F /* Preview Content */,
 			);
 			path = "Event Watch App";
-			sourceTree = "<group>";
-		};
-		71A93CC82DFABBAA000C0B5F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				71A93CC92DFABBAA000C0B5F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +240,18 @@
 			dependencies = (
 			);
 			name = "Event Watch App";
+			packageProductDependencies = (
+				715CF84C2DFADA130025D4A2 /* RxBlocking */,
+				715CF84E2DFADA130025D4A2 /* RxBlocking-Dynamic */,
+				715CF8502DFADA130025D4A2 /* RxCocoa */,
+				715CF8522DFADA130025D4A2 /* RxCocoa-Dynamic */,
+				715CF8542DFADA130025D4A2 /* RxRelay */,
+				715CF8562DFADA130025D4A2 /* RxRelay-Dynamic */,
+				715CF8582DFADA130025D4A2 /* RxSwift */,
+				715CF85A2DFADA130025D4A2 /* RxSwift-Dynamic */,
+				715CF85C2DFADA130025D4A2 /* RxTest */,
+				715CF85E2DFADA130025D4A2 /* RxTest-Dynamic */,
+			);
 			productName = "Event Watch App";
 			productReference = 71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 71A93CB02DFABBA6000C0B5F;
+			packageReferences = (
+				715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 71A93CB82DFABBA7000C0B5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,8 +308,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71A93CCA2DFABBAA000C0B5F /* Preview Assets.xcassets in Resources */,
-				71A93CC72DFABBAA000C0B5F /* Assets.xcassets in Resources */,
+				715CF84A2DFAD7AE0025D4A2 /* Preview Assets.xcassets in Resources */,
+				715CF8612DFAE0430025D4A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71A93CC52DFABBA7000C0B5F /* ContentView.swift in Sources */,
+				715CF86B2DFB03E00025D4A2 /* SpashView.swift in Sources */,
+				715CF86F2DFB04070025D4A2 /* MainView.swift in Sources */,
 				71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */,
+				715CF8672DFAE4780025D4A2 /* WatchAppIcon.swift in Sources */,
+				715CF8692DFAE4780025D4A2 /* WatchAppSize.swift in Sources */,
+				715CF8752DFB0F900025D4A2 /* BaseViewModel.swift in Sources */,
+				715CF8682DFAE4780025D4A2 /* WatchAppFont.swift in Sources */,
+				715CF86E2DFB04070025D4A2 /* MainViewModel.swift in Sources */,
+				715CF8742DFB0F900025D4A2 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +582,70 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		715CF84C2DFADA130025D4A2 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		715CF84E2DFADA130025D4A2 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		715CF8502DFADA130025D4A2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		715CF8522DFADA130025D4A2 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		715CF8542DFADA130025D4A2 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		715CF8562DFADA130025D4A2 /* RxRelay-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxRelay-Dynamic";
+		};
+		715CF8582DFADA130025D4A2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		715CF85A2DFADA130025D4A2 /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
+		};
+		715CF85C2DFADA130025D4A2 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		715CF85E2DFADA130025D4A2 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 715CF84B2DFADA130025D4A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71A93CB12DFABBA6000C0B5F /* Project object */;
 }
