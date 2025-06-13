@@ -18,6 +18,13 @@ struct MainView: View {
             case .auth:
                 RequestAuthenticationView()
                     .environmentObject(mainViewModel)
+            case .home:
+                ZStack {
+                    NavigationStack {
+                        HomeView()
+                    }
+                   
+                }
             }
             
         }

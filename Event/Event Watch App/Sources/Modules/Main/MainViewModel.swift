@@ -12,6 +12,7 @@ import RxSwift
 enum ViewType {
     case auth
     case splash
+    case home
 }
 
 class MainViewModel: BaseViewModel {
@@ -31,7 +32,7 @@ class MainViewModel: BaseViewModel {
                     
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.isLoading = false
-                self.currentView = isLoggedIn ? .splash : .auth
+                self.currentView = isLoggedIn ? .home : .auth
             }
             
         }
@@ -45,7 +46,7 @@ class MainViewModel: BaseViewModel {
                     
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.isLoading = false
-                self.currentView = isLoggedIn ? .splash : .auth
+                self.currentView = isLoggedIn ? .home : .auth
             }
             
         }
