@@ -20,7 +20,7 @@ struct RequestAuthenticationView: View {
                     .padding(.bottom, 12)
                 
                 PrimaryButton(title: "Login") {
-                    mainViewModel.requestAuthorization()
+                    mainViewModel.onFakeLogined()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

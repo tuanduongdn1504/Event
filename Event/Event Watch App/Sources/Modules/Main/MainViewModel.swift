@@ -36,4 +36,18 @@ class MainViewModel: BaseViewModel {
             
         }
     }
+    
+    func onFakeLogined() {
+        isLoading = true
+        DispatchQueue.main.async {
+            // Hard code for response instead of call API
+            let isLoggedIn = true
+                    
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isLoading = false
+                self.currentView = isLoggedIn ? .splash : .auth
+            }
+            
+        }
+    }
 }
