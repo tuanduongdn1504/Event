@@ -22,7 +22,21 @@ struct BaseView<Content: View, ViewModel: BaseViewModel>: View {
     
     var body: some View {
         ZStack {
-            content            
+            content
+            if viewModel.isLoading {
+                ZStack {
+                    Color.white.opacity(0.3)
+                    
+                    ProgressView()
+                        .padding()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.primaryColor))
+                        .cornerRadius(15)
+                        .shadow(radius: 10)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .edgesIgnoringSafeArea(.all)
+            }
+            
             if let errorMessage = viewModel.errorMessage, !errorMessage.isEmpty {
                 errorAlert(errorMessage: errorMessage)
             }
@@ -30,6 +44,7 @@ struct BaseView<Content: View, ViewModel: BaseViewModel>: View {
         .foregroundStyle(.black)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .disabled(viewModel.isLoading)
+//        .background(.white)
     }
 }
 
@@ -38,10 +53,26 @@ extension BaseView {
     func errorAlert(errorMessage: String) -> some View {
         VStack {
             VStack {
+                HStack {
+                    Image(systemName: "xmark.circle.fill")
+                        .toIcon()
+                        .foregroundStyle(.white)
+                        .padding(.vertical, Spacing.xxSmall.rawValue)
+                        .padding(.trailing, Spacing.xSmall.rawValue)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            withAnimation {
+                                viewModel.errorMessage = nil
+                            }
+                        }
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .background(Color.grey600)
+                
                 Image(WatchAppIcon.failed.rawValue)
                     .resizable()
                     .scaledToFit()
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(Color.primaryColor)
                     .frame(width: 40)
                 
                 Text(errorMessage)

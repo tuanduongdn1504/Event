@@ -27,6 +27,7 @@
 		715CF86F2DFB04070025D4A2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF86D2DFB04070025D4A2 /* MainView.swift */; };
 		715CF8742DFB0F900025D4A2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8722DFB0F900025D4A2 /* BaseView.swift */; };
 		715CF8752DFB0F900025D4A2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */; };
+		715CF9812DFC32620025D4A2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF9802DFC32620025D4A2 /* Color+Extension.swift */; };
 		71A93CBE2DFABBA7000C0B5F /* Event Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A93CC22DFABBA7000C0B5F /* EventApp.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		715CF86D2DFB04070025D4A2 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		715CF8722DFB0F900025D4A2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		715CF9802DFC32620025D4A2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		71A93CB72DFABBA7000C0B5F /* Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CC22DFABBA7000C0B5F /* EventApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventApp.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		715CF8702DFB0F6B0025D4A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				715CF97F2DFC32330025D4A2 /* Extensions */,
 				715CF8712DFB0F770025D4A2 /* Bases */,
 			);
 			path = Common;
@@ -177,6 +180,14 @@
 				715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */,
 			);
 			path = Bases;
+			sourceTree = "<group>";
+		};
+		715CF97F2DFC32330025D4A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				715CF9802DFC32620025D4A2 /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		71A93CB02DFABBA6000C0B5F = {
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				715CF86B2DFB03E00025D4A2 /* SpashView.swift in Sources */,
+				715CF9812DFC32620025D4A2 /* Color+Extension.swift in Sources */,
 				715CF86F2DFB04070025D4A2 /* MainView.swift in Sources */,
 				71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */,
 				715CF8672DFAE4780025D4A2 /* WatchAppIcon.swift in Sources */,
