@@ -33,6 +33,29 @@
 		715CF8742DFB0F900025D4A2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8722DFB0F900025D4A2 /* BaseView.swift */; };
 		715CF8752DFB0F900025D4A2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */; };
 		715CF9812DFC32620025D4A2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715CF9802DFC32620025D4A2 /* Color+Extension.swift */; };
+		717221732E06A8FB00D2818A /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717221722E06A8FB00D2818A /* EventsView.swift */; };
+		717221752E06A93800D2818A /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717221742E06A93800D2818A /* EventsViewModel.swift */; };
+		717221792E06B50A00D2818A /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717221782E06B50A00D2818A /* WatchService.swift */; };
+		7172217B2E06B56E00D2818A /* WatchServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172217A2E06B56E00D2818A /* WatchServiceContainer.swift */; };
+		7172217E2E06B7B400D2818A /* EventWatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172217D2E06B7B400D2818A /* EventWatchAPI.swift */; };
+		7193928F2E07AC4000B36DBC /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193928E2E07AC4000B36DBC /* EventsModel.swift */; };
+		719392912E07ACAB00B36DBC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392902E07ACAB00B36DBC /* String.swift */; };
+		719392962E07AD2B00B36DBC /* DateTimeFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392952E07AD2B00B36DBC /* DateTimeFormatType.swift */; };
+		719392982E07AE3300B36DBC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392972E07AE3300B36DBC /* Date.swift */; };
+		7193929A2E07AF5000B36DBC /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392992E07AF5000B36DBC /* Foundation.swift */; };
+		7193929D2E07BC1400B36DBC /* NoMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193929C2E07BC1400B36DBC /* NoMoreView.swift */; };
+		7193929F2E07BCB000B36DBC /* RefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193929E2E07BCB000B36DBC /* RefreshingView.swift */; };
+		719392A12E07BEEA00B36DBC /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392A02E07BEEA00B36DBC /* Refresh.swift */; };
+		719392A52E07C0B400B36DBC /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392A42E07C0B400B36DBC /* RefreshHeader.swift */; };
+		719392A72E07C18900B36DBC /* RefreshHeaderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392A62E07C18900B36DBC /* RefreshHeaderKey.swift */; };
+		719392A92E07C1FA00B36DBC /* RefreshFooterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392A82E07C1FA00B36DBC /* RefreshFooterKey.swift */; };
+		719392AB2E07C23000B36DBC /* RefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392AA2E07C23000B36DBC /* RefreshFooter.swift */; };
+		719392AD2E07C31B00B36DBC /* EventsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392AC2E07C31B00B36DBC /* EventsItemView.swift */; };
+		719392AF2E07C3EB00B36DBC /* List+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392AE2E07C3EB00B36DBC /* List+Refresh.swift */; };
+		719392B12E07C46900B36DBC /* RefreshModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392B02E07C46900B36DBC /* RefreshModifier.swift */; };
+		719392B32E07C6B700B36DBC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392B22E07C6B700B36DBC /* View+Extension.swift */; };
+		719392B52E07C72300B36DBC /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392B42E07C72300B36DBC /* NavigationBar.swift */; };
+		719392B72E07CA4500B36DBC /* EventWatchRestfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719392B62E07CA4500B36DBC /* EventWatchRestfulAPI.swift */; };
 		71A93CBE2DFABBA7000C0B5F /* Event Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A93CC22DFABBA7000C0B5F /* EventApp.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +101,29 @@
 		715CF8722DFB0F900025D4A2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		715CF8732DFB0F900025D4A2 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		715CF9802DFC32620025D4A2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		717221722E06A8FB00D2818A /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		717221742E06A93800D2818A /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		717221782E06B50A00D2818A /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
+		7172217A2E06B56E00D2818A /* WatchServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchServiceContainer.swift; sourceTree = "<group>"; };
+		7172217D2E06B7B400D2818A /* EventWatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWatchAPI.swift; sourceTree = "<group>"; };
+		7193928E2E07AC4000B36DBC /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		719392902E07ACAB00B36DBC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		719392952E07AD2B00B36DBC /* DateTimeFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatType.swift; sourceTree = "<group>"; };
+		719392972E07AE3300B36DBC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		719392992E07AF5000B36DBC /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		7193929C2E07BC1400B36DBC /* NoMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoreView.swift; sourceTree = "<group>"; };
+		7193929E2E07BCB000B36DBC /* RefreshingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshingView.swift; sourceTree = "<group>"; };
+		719392A02E07BEEA00B36DBC /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
+		719392A42E07C0B400B36DBC /* RefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshHeader.swift; sourceTree = "<group>"; };
+		719392A62E07C18900B36DBC /* RefreshHeaderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshHeaderKey.swift; sourceTree = "<group>"; };
+		719392A82E07C1FA00B36DBC /* RefreshFooterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooterKey.swift; sourceTree = "<group>"; };
+		719392AA2E07C23000B36DBC /* RefreshFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooter.swift; sourceTree = "<group>"; };
+		719392AC2E07C31B00B36DBC /* EventsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsItemView.swift; sourceTree = "<group>"; };
+		719392AE2E07C3EB00B36DBC /* List+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Refresh.swift"; sourceTree = "<group>"; };
+		719392B02E07C46900B36DBC /* RefreshModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModifier.swift; sourceTree = "<group>"; };
+		719392B22E07C6B700B36DBC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		719392B42E07C72300B36DBC /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		719392B62E07CA4500B36DBC /* EventWatchRestfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWatchRestfulAPI.swift; sourceTree = "<group>"; };
 		71A93CB72DFABBA7000C0B5F /* Event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CBD2DFABBA7000C0B5F /* Event Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A93CC22DFABBA7000C0B5F /* EventApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventApp.swift; sourceTree = "<group>"; };
@@ -116,7 +162,9 @@
 		714CE7FD2DFC661A00B255AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7193929B2E07BBD900B36DBC /* Refresh */,
 				714CE7FE2DFC663A00B255AA /* PrimaryButton.swift */,
+				719392B42E07C72300B36DBC /* NavigationBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +172,7 @@
 		714CE8002DFC7ECA00B255AA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				717221712E06A7ED00D2818A /* Events */,
 				714CE8012DFC7EF800B255AA /* HomeViewModel.swift */,
 				714CE8032DFC7F4000B255AA /* HomeView.swift */,
 			);
@@ -133,6 +182,7 @@
 		715CF83D2DFAD7610025D4A2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				717221762E06B4EC00D2818A /* Data */,
 				715CF8702DFB0F6B0025D4A2 /* Common */,
 				715CF8622DFAE4780025D4A2 /* Helpers */,
 				715CF83E2DFAD7610025D4A2 /* Modules */,
@@ -205,6 +255,7 @@
 		715CF8702DFB0F6B0025D4A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				719392942E07AD0D00B36DBC /* Types */,
 				714CE7FD2DFC661A00B255AA /* View */,
 				715CF97F2DFC32330025D4A2 /* Extensions */,
 				715CF8712DFB0F770025D4A2 /* Bases */,
@@ -225,8 +276,90 @@
 			isa = PBXGroup;
 			children = (
 				715CF9802DFC32620025D4A2 /* Color+Extension.swift */,
+				719392902E07ACAB00B36DBC /* String.swift */,
+				719392972E07AE3300B36DBC /* Date.swift */,
+				719392992E07AF5000B36DBC /* Foundation.swift */,
+				719392B22E07C6B700B36DBC /* View+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		717221712E06A7ED00D2818A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				717221722E06A8FB00D2818A /* EventsView.swift */,
+				717221742E06A93800D2818A /* EventsViewModel.swift */,
+				719392AC2E07C31B00B36DBC /* EventsItemView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		717221762E06B4EC00D2818A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7193928D2E07AC2B00B36DBC /* Models */,
+				717221772E06B4F500D2818A /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		717221772E06B4F500D2818A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7172217C2E06B77E00D2818A /* Networking */,
+				717221782E06B50A00D2818A /* WatchService.swift */,
+				7172217A2E06B56E00D2818A /* WatchServiceContainer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7172217C2E06B77E00D2818A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7172217D2E06B7B400D2818A /* EventWatchAPI.swift */,
+				719392B62E07CA4500B36DBC /* EventWatchRestfulAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7193928D2E07AC2B00B36DBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7193928E2E07AC4000B36DBC /* EventsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		719392942E07AD0D00B36DBC /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				719392952E07AD2B00B36DBC /* DateTimeFormatType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		7193929B2E07BBD900B36DBC /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				719392A32E07C06F00B36DBC /* RefreshExtensions */,
+				7193929C2E07BC1400B36DBC /* NoMoreView.swift */,
+				7193929E2E07BCB000B36DBC /* RefreshingView.swift */,
+				719392A02E07BEEA00B36DBC /* Refresh.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		719392A32E07C06F00B36DBC /* RefreshExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				719392A42E07C0B400B36DBC /* RefreshHeader.swift */,
+				719392A62E07C18900B36DBC /* RefreshHeaderKey.swift */,
+				719392A82E07C1FA00B36DBC /* RefreshFooterKey.swift */,
+				719392AA2E07C23000B36DBC /* RefreshFooter.swift */,
+				719392AE2E07C3EB00B36DBC /* List+Refresh.swift */,
+				719392B02E07C46900B36DBC /* RefreshModifier.swift */,
+			);
+			path = RefreshExtensions;
 			sourceTree = "<group>";
 		};
 		71A93CB02DFABBA6000C0B5F = {
@@ -373,18 +506,41 @@
 				715CF86B2DFB03E00025D4A2 /* SpashView.swift in Sources */,
 				715CF9812DFC32620025D4A2 /* Color+Extension.swift in Sources */,
 				714CE5032DFC379800B255AA /* RequestAuthenticationView.swift in Sources */,
+				719392AF2E07C3EB00B36DBC /* List+Refresh.swift in Sources */,
 				714CE8042DFC7F4000B255AA /* HomeView.swift in Sources */,
+				719392A72E07C18900B36DBC /* RefreshHeaderKey.swift in Sources */,
 				715CF86F2DFB04070025D4A2 /* MainView.swift in Sources */,
 				71A93CC32DFABBA7000C0B5F /* EventApp.swift in Sources */,
 				714CE7FF2DFC663A00B255AA /* PrimaryButton.swift in Sources */,
 				715CF8672DFAE4780025D4A2 /* WatchAppIcon.swift in Sources */,
+				7172217B2E06B56E00D2818A /* WatchServiceContainer.swift in Sources */,
 				715CF8692DFAE4780025D4A2 /* WatchAppSize.swift in Sources */,
+				719392A52E07C0B400B36DBC /* RefreshHeader.swift in Sources */,
+				719392AB2E07C23000B36DBC /* RefreshFooter.swift in Sources */,
+				719392A92E07C1FA00B36DBC /* RefreshFooterKey.swift in Sources */,
+				7193929D2E07BC1400B36DBC /* NoMoreView.swift in Sources */,
 				715CF8752DFB0F900025D4A2 /* BaseViewModel.swift in Sources */,
+				717221752E06A93800D2818A /* EventsViewModel.swift in Sources */,
+				719392912E07ACAB00B36DBC /* String.swift in Sources */,
 				714CE8022DFC7EF800B255AA /* HomeViewModel.swift in Sources */,
+				7193929F2E07BCB000B36DBC /* RefreshingView.swift in Sources */,
+				7172217E2E06B7B400D2818A /* EventWatchAPI.swift in Sources */,
+				717221732E06A8FB00D2818A /* EventsView.swift in Sources */,
 				715CF8682DFAE4780025D4A2 /* WatchAppFont.swift in Sources */,
+				7193928F2E07AC4000B36DBC /* EventsModel.swift in Sources */,
+				7193929A2E07AF5000B36DBC /* Foundation.swift in Sources */,
 				715CF86E2DFB04070025D4A2 /* MainViewModel.swift in Sources */,
+				719392B12E07C46900B36DBC /* RefreshModifier.swift in Sources */,
+				719392982E07AE3300B36DBC /* Date.swift in Sources */,
 				715CF8742DFB0F900025D4A2 /* BaseView.swift in Sources */,
 				714CE5012DFC36DF00B255AA /* RequestAuthenticationViewModel.swift in Sources */,
+				717221792E06B50A00D2818A /* WatchService.swift in Sources */,
+				719392AD2E07C31B00B36DBC /* EventsItemView.swift in Sources */,
+				719392B72E07CA4500B36DBC /* EventWatchRestfulAPI.swift in Sources */,
+				719392962E07AD2B00B36DBC /* DateTimeFormatType.swift in Sources */,
+				719392B32E07C6B700B36DBC /* View+Extension.swift in Sources */,
+				719392B52E07C72300B36DBC /* NavigationBar.swift in Sources */,
+				719392A12E07BEEA00B36DBC /* Refresh.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
