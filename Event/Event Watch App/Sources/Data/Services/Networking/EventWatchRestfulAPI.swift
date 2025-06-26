@@ -47,9 +47,7 @@ extension EventWatchRestfulAPI {
         guard let response = dataTaskOutput.response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode < 300 else {
             throw DataError.badResponse(response: dataTaskOutput.response, url: url)
         }
-        if let json = try? JSONSerialization.jsonObject(with: dataTaskOutput.response, options: []) {
-            print("📦 JSON object:\n\(json)")
-        }
+
         print(dataTaskOutput)
         return dataTaskOutput.data
     }
