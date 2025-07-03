@@ -71,7 +71,7 @@ struct HomeView: View {
             case .news:
                 SpashView()
             case .events:
-                SpashView()
+                EventsView()
             }
         }
     }
