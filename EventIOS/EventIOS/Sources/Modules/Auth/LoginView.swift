@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     // MARK: User Details
-    @State var emailID: String = ""
-    @State var password: String = ""
+    @State private var emailID: String = ""
+    @State private var password: String = ""
     // MARK: View Properties
-    @State var createAccount: Bool = false
+    @State private var createAccount: Bool = false
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = ""
     var body: some View {
         VStack(spacing: 10) {
             Text("Lets Sign you in")
@@ -33,14 +36,14 @@ struct LoginView: View {
                     .textContentType(.emailAddress)
                     .border(1, .gray.opacity(0.5))
                     
-                Button("Reset password?", action: {})
+                Button("Reset password?", action: resetPassword)
                     .font(.callout)
                     .fontWeight(.medium)
                     .tint(.black)
                     .hAlign(.trailing)
                 
                 Button{
-                    
+                    loginUser()
                 } label: {
                     // MARK: Login Button
                     Text("Sign in")
@@ -69,7 +72,42 @@ struct LoginView: View {
         .padding(15)
         // MARK: Register View VIA Sheets
         .fullScreenCover(isPresented: $createAccount, content: {
-//            RegisterView()
+            LoginView()
+        })
+        // MARK: Displaying Alert
+        .alert(errorMessage, isPresented: $showError, actions: {})
+    }
+    
+    private func loginUser() {
+        Task{
+            do{
+                // With the help of Swift Concerrency Auth can be done with Single Line
+                try await Auth.auth().signIn(withEmail: emailID, password: password)
+                print("User Found")
+            }catch{
+                await setError(error)
+            }
+        }
+    }
+    
+    private func resetPassword() {
+        Task{
+            do{
+                // With the help of Swift Concerrency Auth can be done with Single Line
+                try await Auth.auth().sendPasswordReset(withEmail: emailID)
+                print("Link Send")
+            }catch{
+                await setError(error)
+            }
+        }
+    }
+    
+    // MARK: Displaying Error VIA Alert
+    func setError(_ error:Error)async{
+        // MARK: UI Must be Update on Main Thread
+        await MainActor.run(body: {
+            errorMessage = error.localizedDescription
+            showError.toggle()
         })
     }
 }
