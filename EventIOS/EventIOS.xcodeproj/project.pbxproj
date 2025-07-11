@@ -35,6 +35,7 @@
 		710154002E20A1F4008E0939 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 710153FF2E20A1F4008E0939 /* FirebaseStorage */; };
 		710154022E20A1F4008E0939 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 710154012E20A1F4008E0939 /* FirebaseStorageCombine-Community */; };
 		7101540A2E20A582008E0939 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710154082E20A582008E0939 /* LoginView.swift */; };
+		7101540C2E20BEE7008E0939 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101540B2E20BEE7008E0939 /* RegisterView.swift */; };
 		71936BE22E1E5E3800796D78 /* EventIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71936BE12E1E5E3800796D78 /* EventIOSApp.swift */; };
 		71936BE42E1E5E3800796D78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71936BE32E1E5E3800796D78 /* ContentView.swift */; };
 		71936BE62E1E5E3C00796D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71936BE52E1E5E3C00796D78 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		710154082E20A582008E0939 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7101540B2E20BEE7008E0939 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		71936BDE2E1E5E3800796D78 /* EventIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71936BE12E1E5E3800796D78 /* EventIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventIOSApp.swift; sourceTree = "<group>"; };
 		71936BE32E1E5E3800796D78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				710154082E20A582008E0939 /* LoginView.swift */,
+				7101540B2E20BEE7008E0939 /* RegisterView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71936BE42E1E5E3800796D78 /* ContentView.swift in Sources */,
+				7101540C2E20BEE7008E0939 /* RegisterView.swift in Sources */,
 				7101540A2E20A582008E0939 /* LoginView.swift in Sources */,
 				71936BE22E1E5E3800796D78 /* EventIOSApp.swift in Sources */,
 			);
