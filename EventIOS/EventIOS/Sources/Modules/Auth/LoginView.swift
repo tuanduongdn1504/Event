@@ -16,6 +16,11 @@ struct LoginView: View {
     @State private var createAccount: Bool = false
     @State private var showError: Bool = false
     @State private var errorMessage: String = ""
+    // MARK: UserDefaults
+    @AppStorage("log_status") var logStatus: Bool = false
+    @AppStorage("user_profile_url") var profileURL: URL?
+    @AppStorage("user_name") var userNameStored: String = ""
+    @AppStorage("user_UID") var userUID: String = ""
     var body: some View {
         VStack(spacing: 10) {
             Text("Lets Sign you in")
@@ -84,6 +89,7 @@ struct LoginView: View {
                 // With the help of Swift Concerrency Auth can be done with Single Line
                 try await Auth.auth().signIn(withEmail: emailID, password: password)
                 print("User Found")
+                logStatus = true
             }catch{
                 await setError(error)
             }

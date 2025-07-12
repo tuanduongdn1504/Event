@@ -7,8 +7,8 @@
 
 import SwiftUI
 import PhotosUI
-import Firebase
-import FirebaseStorage
+import FirebaseAuth
+//import FirebaseStorage
 
 // MARK: Register View
 struct RegisterView: View {
@@ -121,7 +121,7 @@ struct RegisterView: View {
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
 
-            TextField("Email", text: $userBioLink)
+            TextField("Bio Link", text: $userBioLink)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
 
@@ -144,27 +144,32 @@ struct RegisterView: View {
             do{
                 // Step 1: Creating Firebase Account
                 try await Auth.auth().createUser(withEmail: emailID, password: password)
-                // Step 2: Uploading Profile Photo Into Firebase Storage
-                guard let userUID = Auth.auth().currentUser?.uid else{return}
-                guard let imageData = userProfilePicData else{return}
-                let storageRef = Storage.storage().reference().child("Profile_Images").child(userUID)
-                let _ = try await storageRef.putDataAsync(imageData)
-                // Step 3: Downloading Photo URL
-                let downloadURL = try await storageRef.downloadURL()
-                // Step 4: Creating a User Firestore Object
-                let user = User(username: userName, userBio: userBio, userBioLink: userBioLink, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
-                // Step 5: Saving User Doc into Firestore Database
-                let _ = try Firestore.firestore().collection("User").document(userUID).setData(from: user, completion: {
-                    error in
-                    if error == nil {
-                        // MARK: Print Saved Successfully
-                        print("Saved Sucessfully")
-                        userNameStored = userName
-                        self.userUID = userUID
-                        profileURL = downloadURL
-                        logStatus = true
-                    }
-                })
+//                // Step 2: Uploading Profile Photo Into Firebase Storage
+//                guard let userUID = Auth.auth().currentUser?.uid else{return}
+//                guard let imageData = userProfilePicData else{return}
+//                let storageRef = Storage.storage().reference().child("Profile_Images").child(userUID)
+//                let _ = try await storageRef.putDataAsync(imageData)
+//                // Step 3: Downloading Photo URL
+//                let downloadURL = try await storageRef.downloadURL()
+//                // Step 4: Creating a User Firestore Object
+//                let user = User(username: userName, userBio: userBio, userBioLink: userBioLink, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
+//                // Step 5: Saving User Doc into Firestore Database
+//                let _ = try Firestore.firestore().collection("User").document(userUID).setData(from: user, completion: {
+//                    error in
+//                    if error == nil {
+//                        // MARK: Print Saved Successfully
+//                        print("Saved Sucessfully")
+//                        userNameStored = userName
+//                        self.userUID = userUID
+//                        profileURL = downloadURL
+//                        logStatus = true
+//                    }
+//                })
+                // Firestore require CREDIT CARD
+                print("Saved Sucessfully")
+                userNameStored = userName
+                self.userUID = userUID
+                logStatus = true
             }catch{
                 // MARK: Deleting Created Account In Case Failure
                 try await Auth.auth().currentUser?.delete()
