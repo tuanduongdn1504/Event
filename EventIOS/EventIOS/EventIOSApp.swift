@@ -10,12 +10,17 @@ import Firebase
 
 @main
 struct EventIOSApp: App {
+    @StateObject private var authViewModel = AuthenticationViewModel(
+            authRepository: FirebaseAuthRepository()
+        )
+    
     init(){
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
         }
     }
 }

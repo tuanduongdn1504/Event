@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct LoginView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     // MARK: User Details
     @State private var emailID: String = ""
     @State private var password: String = ""
@@ -21,6 +22,7 @@ struct LoginView: View {
     @AppStorage("user_profile_url") var profileURL: URL?
     @AppStorage("user_name") var userNameStored: String = ""
     @AppStorage("user_UID") var userUID: String = ""
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Lets Sign you in")
@@ -36,10 +38,14 @@ struct LoginView: View {
                     .textContentType(.emailAddress)
                     .border(1, .gray.opacity(0.5))
                     .padding(.top,25)
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.emailAddress)
+                    .submitLabel(.next)
                 
                 SecureField("Password", text: $password)
                     .textContentType(.emailAddress)
                     .border(1, .gray.opacity(0.5))
+                    .textInputAutocapitalization(.never)
                     
                 Button("Reset password?", action: resetPassword)
                     .font(.callout)
@@ -85,26 +91,14 @@ struct LoginView: View {
     
     private func loginUser() {
         Task{
-            do{
-                // With the help of Swift Concerrency Auth can be done with Single Line
-                try await Auth.auth().signIn(withEmail: emailID, password: password)
-                print("User Found")
-                logStatus = true
-            }catch{
-                await setError(error)
-            }
+            await authViewModel.login(email: emailID, password: password)
+            logStatus = true
         }
     }
     
     private func resetPassword() {
         Task{
-            do{
-                // With the help of Swift Concerrency Auth can be done with Single Line
-                try await Auth.auth().sendPasswordReset(withEmail: emailID)
-                print("Link Send")
-            }catch{
-                await setError(error)
-            }
+            await authViewModel.sendPasswordReset(email: emailID)
         }
     }
     

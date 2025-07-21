@@ -12,6 +12,7 @@ import FirebaseAuth
 
 // MARK: Register View
 struct RegisterView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     // MARK: User Details
     @State private var emailID: String = ""
     @State private var password: String = ""
@@ -30,6 +31,7 @@ struct RegisterView: View {
     @AppStorage("user_profile_url") var profileURL: URL?
     @AppStorage("user_name") var userNameStored: String = ""
     @AppStorage("user_UID") var userUID: String = ""
+    
     var body: some View {
         VStack(spacing: 10){
             Text("Lets Register\nAccount")
@@ -107,23 +109,32 @@ struct RegisterView: View {
             TextField("Username", text: $userName)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
+                .submitLabel(.next)
 
             TextField("Email", text: $emailID)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
+                .textInputAutocapitalization(.never)
+                .keyboardType(.emailAddress)
+                .submitLabel(.next)
 
             SecureField("Password", text: $password)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
+                .textInputAutocapitalization(.never)
+                .keyboardType(.emailAddress)
+                .submitLabel(.next)
 
             TextField("About You", text: $userBio, axis: .vertical)
                 .frame(minHeight: 100,alignment: .top)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
+                .submitLabel(.next)
 
             TextField("Bio Link", text: $userBioLink)
                 .textContentType(.emailAddress)
                 .border(1, .gray.opacity(0.5))
+                .textInputAutocapitalization(.never)
 
             Button{
                 registerUser()
@@ -142,37 +153,11 @@ struct RegisterView: View {
     private func registerUser(){
         Task{
             do{
-                // Step 1: Creating Firebase Account
-                try await Auth.auth().createUser(withEmail: emailID, password: password)
-//                // Step 2: Uploading Profile Photo Into Firebase Storage
-//                guard let userUID = Auth.auth().currentUser?.uid else{return}
-//                guard let imageData = userProfilePicData else{return}
-//                let storageRef = Storage.storage().reference().child("Profile_Images").child(userUID)
-//                let _ = try await storageRef.putDataAsync(imageData)
-//                // Step 3: Downloading Photo URL
-//                let downloadURL = try await storageRef.downloadURL()
-//                // Step 4: Creating a User Firestore Object
-//                let user = User(username: userName, userBio: userBio, userBioLink: userBioLink, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
-//                // Step 5: Saving User Doc into Firestore Database
-//                let _ = try Firestore.firestore().collection("User").document(userUID).setData(from: user, completion: {
-//                    error in
-//                    if error == nil {
-//                        // MARK: Print Saved Successfully
-//                        print("Saved Sucessfully")
-//                        userNameStored = userName
-//                        self.userUID = userUID
-//                        profileURL = downloadURL
-//                        logStatus = true
-//                    }
-//                })
-                // Firestore require CREDIT CARD
-                print("Saved Sucessfully")
-                userNameStored = userName
-                self.userUID = userUID
+                try await authViewModel.signUp(email: emailID, password: password)
                 logStatus = true
             }catch{
                 // MARK: Deleting Created Account In Case Failure
-                try await Auth.auth().currentUser?.delete()
+                await authViewModel.deleteAccount()
                 await setError(error)
             }
         }
