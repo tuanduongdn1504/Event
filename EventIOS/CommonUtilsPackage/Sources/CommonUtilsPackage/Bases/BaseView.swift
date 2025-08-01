@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct BaseView<Content: View, ViewModel: BaseViewModel>: View {
+public struct BaseView<Content: View, ViewModel: BaseViewModel>: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: ViewModel
     
     let content: Content
-    let onBackAction: (() -> Void)? = nil
+    public let onBackAction: (() -> Void)? = nil
     
-    init(viewModel: ViewModel,
+    public init(viewModel: ViewModel,
          @ViewBuilder content: () -> Content) {
         self.viewModel = viewModel
         self.content = content()
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             content
             if viewModel.isLoading {
@@ -48,7 +48,7 @@ struct BaseView<Content: View, ViewModel: BaseViewModel>: View {
     }
 }
 
-extension BaseView {
+public extension BaseView {
     @ViewBuilder
     func errorAlert(errorMessage: String) -> some View {
         VStack {
