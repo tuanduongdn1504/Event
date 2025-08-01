@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color {
+public extension Color {
     static let primaryColor = Color(hex: "#F90000")
     static let successDefaut = Color(hex: "#00C48C")
     static let successSoft = Color(hex: "#D5F2EA")
@@ -28,8 +28,8 @@ extension Color {
 }
 
 // Optional: Hex support
-extension Color {
-    init(hex: String) {
+public extension Color {
+    public init(hex: String) {
         let scanner = Scanner(string: hex)
         _ = scanner.scanString("#") // Skip #
 
@@ -44,7 +44,7 @@ extension Color {
     }
 }
 
-extension Image {
+public extension Image {
     func toIcon() -> some View {
         self.resizable()
             .scaledToFit()

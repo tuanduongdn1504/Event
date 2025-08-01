@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension Optional where Wrapped == String {
+public extension Optional where Wrapped == String {
     var isNilOrEmpty: Bool {
         self?.isEmpty ?? true
     }
 }
 
-extension String {
+public extension String {
     var length: Int {
         return count
     }
@@ -73,7 +73,7 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     func convertDateStrToDate(from dateFormat: DateTimeFormatType = .default) -> Date {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = dateFormat.rawValue
@@ -162,7 +162,7 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     static func formattedTimeRange(startTime: String, endTime: String) -> String? {
         guard let startDate = startTime.toTimeDate(),
               let endDate = endTime.toTimeDate() else { return nil }

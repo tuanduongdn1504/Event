@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     enum WeekDay: Int {
         case sunday = 1
         case monday
@@ -17,7 +17,7 @@ extension Date {
         case friday
         case saturday
         
-        var weekDayDisplay: String {
+        public var weekDayDisplay: String {
             switch self {
             case .sunday:
                 return "Sunday"
@@ -65,14 +65,14 @@ extension Date {
         }
     }
     
-    var isWeekend: Bool {
+    public var isWeekend: Bool {
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: self)
         return weekday == 7 || weekday == 1
     }
 }
 
-extension Date {
+public extension Date {
     
     func startOfWeek(using calendar: Calendar = Calendar(identifier: .gregorian)) -> Date {
         let currentWeekday = calendar.component(.weekday, from: self)
@@ -126,7 +126,7 @@ extension Date {
 }
 
 // MARK: - Date static methods
-extension DateFormatter {
+public extension DateFormatter {
     static var unitedStatesDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .iso8601)

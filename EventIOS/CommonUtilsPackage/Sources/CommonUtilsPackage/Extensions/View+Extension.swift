@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
     func withToolbar(title: String? = nil) -> some View {
         self
             .frame(maxWidth: .infinity, maxHeight: .infinity)
