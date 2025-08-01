@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum FontAvenirNextType:String {
+public enum FontAvenirNextType:String {
     case regular = "AvenirNext-Regular"
     case ultraLightItalic = "AvenirNext-UltraLightItalic"
     case ultraLight = "AvenirNext-UltraLight"
@@ -22,7 +22,7 @@ enum FontAvenirNextType:String {
     case heavyItalic = "AvenirNext-HeavyItalic"
 }
 
-extension Font {
+public extension Font {
     static func avenirNext(size: CGFloat,
                            type: FontAvenirNextType = .regular) -> Font{
         self.custom(type.rawValue, size: size)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DateTimeFormatType: String {
+public enum DateTimeFormatType: String {
     case `default` = "YYYY-MM-dd"
     case publicationText = "hh:mma, dd MMM YYYY"
     case medium = "dd MMM YYYY"

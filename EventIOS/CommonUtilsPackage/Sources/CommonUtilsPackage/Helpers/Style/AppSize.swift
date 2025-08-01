@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Spacing: CGFloat {
+public enum Spacing: CGFloat {
     case large = 12
     case medium = 8
     case small = 6
@@ -15,7 +15,7 @@ enum Spacing: CGFloat {
     case xxSmall = 2
 }
 
-enum Radius: CGFloat {
+public enum Radius: CGFloat {
     case large = 12
     case xSmall = 4
 }
