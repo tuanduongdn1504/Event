@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct RefreshingView: View {
-    var body: some View {
+public struct RefreshingView: View {
+    public init () {}
+    
+    public var body: some View {
         ProgressView()
             .progressViewStyle(CircularProgressViewStyle(tint: Color.primaryColor))
             .cornerRadius(15)
