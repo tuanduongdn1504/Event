@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol AnyOptional {
+public protocol AnyOptional {
     var isNil: Bool { get }
 }
 
 extension Optional: AnyOptional {
-    var isNil: Bool { self == nil }
+    public var isNil: Bool { self == nil }
 }
