@@ -7,17 +7,32 @@
 
 import SwiftUI
 
-enum ButtonState {
+public enum ButtonState {
     case `default`, success
 }
 
-struct PrimaryButton: View {
-    var title: String? = nil
-    var successTitle: String? = nil
-    var icon: String? = nil
-    var state: ButtonState? = .default
-    var isEnable: Bool? = true
-    var action: () -> Void
+public struct PrimaryButton: View {
+    public var title: String?
+    public var successTitle: String?
+    public var icon: String?
+    public var state: ButtonState?
+    public var isEnable: Bool?
+    public var action: () -> Void
+    
+    public init(title: String? = nil,
+                successTitle: String? = nil,
+                icon: String? = nil,
+                state: ButtonState? = .default,
+                isEnable: Bool? = true,
+                action: @escaping () -> Void
+    ) {
+        self.title = title
+        self.successTitle = successTitle
+        self.icon = icon
+        self.state = state
+        self.isEnable = isEnable
+        self.action = action
+    }
     
     var background: Color {
         switch state {
@@ -37,7 +52,7 @@ struct PrimaryButton: View {
         }
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             if let icon = icon, state == .success {
                 Image(systemName: icon)
