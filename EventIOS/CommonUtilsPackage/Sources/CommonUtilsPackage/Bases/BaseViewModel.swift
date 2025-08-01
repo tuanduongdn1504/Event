@@ -11,13 +11,13 @@ import Combine
 /// A base class for all ViewModels to inherit common properties and functionalities.
 open class BaseViewModel: ObservableObject {
     /// A collection of cancellables to manage Combine subscriptions.
-    var cancellables = Set<AnyCancellable>()
+    public var cancellables = Set<AnyCancellable>()
     
     /// A published property to handle global error messages in the app.
-    @Published var errorMessage: String? = nil
+    @Published public var errorMessage: String? = nil
     
     /// A published property to track loading states.
-    @Published var isLoading: Bool = false
+    @Published public var isLoading: Bool = false
     
     /// With an Open class, allowing subclasses overriding the initializer just by Public initializer.
     public init() {

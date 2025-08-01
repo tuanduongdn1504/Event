@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public enum WatchAppIcon: String, CaseIterable {
+public enum AppIcon: String, CaseIterable {
     case logo = "ic_logo"
     case timeSheet = "ic_timesheet"
     case actions = "ic_actions"
