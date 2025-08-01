@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 /// A base class for all ViewModels to inherit common properties and functionalities.
-class BaseViewModel: ObservableObject {
+open class BaseViewModel: ObservableObject {
     /// A collection of cancellables to manage Combine subscriptions.
     var cancellables = Set<AnyCancellable>()
     
@@ -19,8 +19,8 @@ class BaseViewModel: ObservableObject {
     /// A published property to track loading states.
     @Published var isLoading: Bool = false
     
-    /// Initializes the base ViewModel.
-    init() {
+    /// With an Open class, allowing subclasses overriding the initializer just by Public initializer.
+    public init() {
         print("[\(type(of: self))] initialized.")
     }
     
@@ -29,16 +29,16 @@ class BaseViewModel: ObservableObject {
         print("[\(type(of: self))] deinitialized.")
     }
     
-    func handleError(_ error: Error) {
+    public func handleError(_ error: Error) {
         errorMessage = error.localizedDescription
         print("Error occurred: \(error.localizedDescription)")
     }
     
-    func clearCancellables() {
+    public func clearCancellables() {
         cancellables.removeAll()
     }
     
-    func clearError() {
+    public func clearError() {
         errorMessage = nil
     }
 }
