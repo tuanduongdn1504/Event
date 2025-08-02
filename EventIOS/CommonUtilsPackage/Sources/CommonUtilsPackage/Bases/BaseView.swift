@@ -69,7 +69,7 @@ public extension BaseView {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .background(Color.grey600)
                 
-                Image(WatchAppIcon.failed.rawValue)
+                Image(AppIcon.failed.rawValue)
                     .resizable()
                     .scaledToFit()
                     .foregroundStyle(Color.primaryColor)
