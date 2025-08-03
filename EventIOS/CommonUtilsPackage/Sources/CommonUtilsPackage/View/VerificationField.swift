@@ -62,7 +62,9 @@ public struct VerificationField: View {
         .background {
             TextField("", text: $value)
                 .focused($isActive)
+                #if os(iOS) || os(tvOS) /// Restrict to platforms that support .numberPad
                 .keyboardType(.numberPad)
+                #endif
                 .mask(alignment: .trailing) {
                     Rectangle()
                         .frame(width: 1, height: 1)
@@ -85,7 +87,7 @@ public struct VerificationField: View {
             }
         }
         
-        if #available(iOS 17.0, *) {
+        if #available(iOS 17.0, macOS 14.0, *) {
             bodyContent
                 /// onChange with inittial property for iOS 17+
                 .onChange(of: value) { oldValue, newValue in
@@ -196,7 +198,7 @@ public struct VerificationField: View {
             let stringValue = string(index)
             
             if stringValue != "" {
-                if #available(iOS 17.0, *) {
+                if #available(iOS 17.0, macOS 14.0, *) {
                     Text(stringValue)
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -234,20 +236,20 @@ public struct VerificationField: View {
 
 #Preview {
     struct PreviewWrapper: View {
-            @State private var code: String = ""
-
-            var body: some View {
-                VerificationField(type: .six, style: .roundedBorder, value: $code, onChange: { result async -> TypingState in
-                    if result.count < 6 {
-                        return .typing
-                    } else if result == "123456" {
-                        return .valid
-                    } else {
-                        return .invalid
-                    }
-                })
-            }
+        @State private var code: String = ""
+        
+        var body: some View {
+            VerificationField(type: .six, style: .roundedBorder, value: $code, onChange: { result async -> TypingState in
+                if result.count < 6 {
+                    return .typing
+                } else if result == "123456" {
+                    return .valid
+                } else {
+                    return .invalid
+                }
+            })
         }
-
+    }
+    
     return PreviewWrapper()
 }
